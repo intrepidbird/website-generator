@@ -3,51 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Generator</title>
+    <title>Website Code Generator</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
     <!-- Header Section -->
     <header class="bg-dark text-white text-center p-4">
-        Website Generator
+        <h1>Website Code Generator</h1>
     </header>
 
-    <!-- Questionnaire Section -->
-    <section id="questionnaire" class="container mt-5">
+    <!-- Main Content Section -->
+    <section id="main-content" class="container mt-5">
         <div class="row justify-content-center">
             <div class="col-md-6">
-                <h2>Answer the Questions</h2>
-                <form id="questionForm">
+                <h2>Generate Your Website Code</h2>
+                <form id="websiteCodeForm">
                     <div class="form-group">
                         <label for="websiteName">Website Name:</label>
                         <input type="text" class="form-control" id="websiteName" placeholder="Enter website name" required>
                     </div>
                     <div class="form-group">
-                        <label for="websiteColor">Website Color:</label>
-                        <input type="color" class="form-control" id="websiteColor" required>
+                        <label for="websiteColors">Website Colors (Choose 3):</label>
+                        <input type="text" class="form-control" id="websiteColors" placeholder="Enter website colors" required>
                     </div>
                     <div class="form-group">
-                        <label for="websiteFont">Website Font:</label>
-                        <select class="form-control" id="websiteFont" required>
-                            <option value="Arial">Arial</option>
-                            <option value="Verdana">Verdana</option>
-                            <option value="Times New Roman">Times New Roman</option>
-                            <option value="Courier New">Courier New</option>
+                        <label for="hasHeader">Include Header:</label>
+                        <select class="form-control" id="hasHeader" required>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
                         </select>
                     </div>
-                    <button type="submit" class="btn btn-primary w-100">Generate Website</button>
+                    <div class="form-group">
+                        <label for="hasFooter">Include Footer:</label>
+                        <select class="form-control" id="hasFooter" required>
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="aboutText">About Text:</label>
+                        <textarea class="form-control" id="aboutText" placeholder="Enter about text" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Generate Code</button>
                 </form>
             </div>
         </div>
     </section>
 
-    <!-- Generated Website Section -->
-    <section id="generatedWebsite" class="container mt-5">
+    <!-- Generated Code Section -->
+    <section id="generatedCode" class="container mt-5">
         <div class="row justify-content-center">
             <div class="col-md-6">
-                <h2 id="websiteTitle"></h2>
-                <p id="websiteDescription"></p>
+                <h2>Your Website Code</h2>
+                <div id="htmlCode" class="mb-3">
+                    <h4>HTML Code</h4>
+                    <pre><code id="htmlCodeSnippet"></code></pre>
+                    <button id="copyHtmlCode" class="btn btn-secondary">Copy HTML Code</button>
+                </div>
+                <div id="cssCode" class="mb-3">
+                    <h4>CSS Code</h4>
+                    <pre><code id="cssCodeSnippet"></code></pre>
+                    <button id="copyCssCode" class="btn btn-secondary">Copy CSS Code</button>
+                </div>
+                <div id="jsCode">
+                    <h4>JavaScript Code</h4>
+                    <pre><code id="jsCodeSnippet"></code></pre>
+                    <button id="copyJsCode" class="btn btn-secondary">Copy JavaScript Code</button>
+                </div>
             </div>
         </div>
     </section>
@@ -55,6 +78,9 @@
     <!-- Bootstrap & jQuery JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Clipboard.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
+    <!-- Custom JS -->
     <script src="script.js"></script>
 </body>
 </html>
