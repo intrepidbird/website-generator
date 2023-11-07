@@ -1,2 +1,2 @@
 # Website Generator
-A website that generates HTML and CSS for your own website.
+A website that generates HTML, CSS, and Javascript for your own website.
