@@ -6,27 +6,32 @@ header {
     font-weight: bold;
 }
 
-#questionnaire {
+#main-content {
     background-color: #f7f7f7;
     padding: 40px;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-#generatedWebsite {
+#generatedCode {
     display: none;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-#generatedWebsite h2 {
-    font-size: 24px;
-    font-weight: bold;
-    color: #000;
+#htmlCode,
+#cssCode,
+#jsCode {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
 }
 
-#generatedWebsite p {
-    font-size: 16px;
-    color: #333;
+#htmlCodeSnippet,
+#cssCodeSnippet,
+#jsCodeSnippet {
+    white-space: pre-wrap;
 }
+
+.btn-secondary {
+    margin-top: 10px;
+}
+
